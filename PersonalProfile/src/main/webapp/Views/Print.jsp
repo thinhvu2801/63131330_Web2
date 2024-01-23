@@ -35,18 +35,17 @@
         p {
             color: #333333;
             font-size: 18px;
-        }
     </style>
 </head>
 <body>
 
     <div id="container">
-        <img src="https://th.bing.com/th/id/OIP.AJ3TCbxW9ECr7LANwlrBlwHaHa?rs=1&pid=ImgDetMain" alt="Avatar">
+        <img src="../Images/cute.jpg" alt="Avatar">
         <h1>Thông tin cá nhân của tôi</h1>
         <p>Họ và tên: <%= "Vũ Minh Thịnh" %></p>
         <p>Ngày sinh: <%= "28-01-2003" %></p>
         <p>Địa chỉ: <%= "Nha Trang" %></p>
-        <p>Nghề nghiệp: <%= "Sinh viên CNTT" %></p>
+        <p>Nghề nghiệp: <%= "Sinh viên CNTT" %></p>   
     </div>
 
 </body>
