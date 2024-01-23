@@ -6,7 +6,7 @@ Hello there! 👋 I'm Vu Minh Thinh, a passionate student with a love for techno
 
 - **Name:** Vũ Minh Thịnh
 - **Location:** NhaTrang University
-- **GitHub:** (github.com/thinhvu2801)
+- **GitHub:** [(thinhvu2801)](https://github.com/thinhvu2801)
 
 I thrive on turning ideas into reality and enjoy collaborating with like-minded individuals to create meaningful projects.
 
