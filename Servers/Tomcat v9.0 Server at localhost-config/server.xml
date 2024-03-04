@@ -160,7 +160,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="HelloWorld" path="/HelloWorld" reloadable="true" source="org.eclipse.jst.jee.server:HelloWorld"/><Context docBase="DoPOST" path="/DoPOST" reloadable="true" source="org.eclipse.jst.jee.server:DoPOST"/><Context docBase="BMICalc" path="/BMICalc" reloadable="true" source="org.eclipse.jst.jee.server:BMICalc"/><Context docBase="PersonalProfile" path="/PersonalProfile" reloadable="true" source="org.eclipse.jst.jee.server:PersonalProfile"/><Context docBase="DangNhap" path="/DangNhap" reloadable="true" source="org.eclipse.jst.jee.server:DangNhap"/></Host>
+      <Context docBase="HelloWorld" path="/HelloWorld" reloadable="true" source="org.eclipse.jst.jee.server:HelloWorld"/><Context docBase="DoPOST" path="/DoPOST" reloadable="true" source="org.eclipse.jst.jee.server:DoPOST"/><Context docBase="BMICalc" path="/BMICalc" reloadable="true" source="org.eclipse.jst.jee.server:BMICalc"/><Context docBase="PersonalProfile" path="/PersonalProfile" reloadable="true" source="org.eclipse.jst.jee.server:PersonalProfile"/><Context docBase="DangNhap" path="/DangNhap" reloadable="true" source="org.eclipse.jst.jee.server:DangNhap"/><Context docBase="SpringMVCBai1Maven" path="/SpringMVCBai1Maven" reloadable="true" source="org.eclipse.jst.j2ee.server:SpringMVCBai1Maven"/></Host>
     </Engine>
   </Service>
 </Server>
