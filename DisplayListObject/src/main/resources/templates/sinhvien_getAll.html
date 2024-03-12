@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 2px solid #ddd;
+    background-color: #fff;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+</style>
+<head>
+<title>Danh sách sinh viên</title>
+<link rel="stylesheet" type="text/css" href="myStyle.css"> <!-- ko import dc -->
+</head>
+<body>
+	<h1>Student List</h1>
+	<table border="1">
+		<thead>
+			<tr>
+				<th>Mã số sinh viên </th>
+				<th>Họ và Tên </th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="sv : ${dsSV}">
+				<td th:text="${sv.maSoSV}" />
+				<td th:text="${sv.hoVaTen}" />
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
