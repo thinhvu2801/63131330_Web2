@@ -18,8 +18,7 @@ Web 2 is where I upload my code whenever I learn something new about JSP in scho
 
 ### Technologies Used
 
-- **Frontend:** HTML, CSS, JS
-- **Backend:** Java
+HTML, CSS, JS, Java, Spring Boot
 
 ### How to Get Involved
 

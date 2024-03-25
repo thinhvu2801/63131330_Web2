@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Thêm mới SV</title>
+    <link th:href ="@{/css/style.css}" rel="stylesheet" />
+
+</head>
+<body>
+<div align="center">
+    <h1>Thêm mới sinh viên</h1>
+    <form action="#" th:action="@{/themMoiSV}" method="post" th:object="${svDTO}">
+        <label>Mã số SV:</label>
+        <input type="text" th:field="*{maSoSV}" /><br/>
+ 
+        <label>Họ và Tên:</label>
+        <input type="text" th:field="*{hoVaTen}" /><br/>
+         <button type="submit">Thực hiện thêm</button>    
+    </form>
+</div>
+</body>
+</html>
