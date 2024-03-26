@@ -8,17 +8,17 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class HomeController {
 	@RequestMapping("/welcome")
 	public String welcome(ModelMap model) {
-		model.addAttribute("msg", "Helo maven");
+		model.addAttribute("msg", "Hello");
 		return "viewWelcome";
 	}
-	@RequestMapping("/index")
+	@RequestMapping("/")
 	public String index(ModelMap model) {
-		model.addAttribute("msg", "Helo maven");
-		return "viewIndex";
+		model.addAttribute("msg", "Hello, I am VMT");
+		return "index";
 	}
 	@RequestMapping("/about")
 	public String about(ModelMap model) {
-		model.addAttribute("msg", "Helo maven");
+		model.addAttribute("msg", "Hello");
 		return "viewAbout";
 	}
 }

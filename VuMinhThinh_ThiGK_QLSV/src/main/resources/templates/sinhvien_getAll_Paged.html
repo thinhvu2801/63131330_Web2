@@ -66,11 +66,36 @@
         .pagination a:hover:not(.active) {
             background-color: #ddd;
         }
+        .search-form {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .search-input {
+            padding: 8px;
+            width: 200px;
+            border-radius: 4px;
+            border: 1px solid #ddd;
+        }
+        .search-button {
+            padding: 8px 16px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <h1>Danh sách sinh viên</h1>
+        
+        <!-- Tìm kiếm dựa vào MSSV -->
+        <div class="search-form">
+            <input type="text" class="search-input" id="searchInput" placeholder="Nhập mã số sinh viên...">
+            <button class="search-button" onclick="searchStudent()">Tra cứu</button>
+        </div>
+        
         <table>
             <thead>
                 <tr>
@@ -86,11 +111,11 @@
             </tbody>
         </table>
         <div class="wrap_pagination">
-		    <div class="pagination" th:if="${dsSV.totalPages > 0}" th:each="pageNumber : ${pageNumbers}" style="display: inline-block;">
-		        <a th:href="@{/danhsachSV(size=${dsSV.size}, page=${pageNumber})}" th:text="${pageNumber}"
-		           th:class="${pageNumber == dsSV.number + 1} ? 'active'"></a>
-		    </div>
-    	</div>
+            <div class="pagination" th:if="${dsSV.totalPages > 0}" th:each="pageNumber : ${pageNumbers}" style="display: inline-block;">
+                <a th:href="@{/danhsachSV(size=${dsSV.size}, page=${pageNumber})}" th:text="${pageNumber}"
+                   th:class="${pageNumber == dsSV.number + 1} ? 'active'"></a>
+            </div>
+        </div>
     </div>
 </body>
 </html>
