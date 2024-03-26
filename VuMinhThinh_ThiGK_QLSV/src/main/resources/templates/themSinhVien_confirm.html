@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Thêm mới Sinh viên thành công</title>
+    <link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+<body>
+    <div class="container">
+        <h2>Thêm Sinh viên Thành công!</h2>
+        <div class="success-message">
+            <span>Mã Số SV:</span><span th:text="${svDTO.maSoSV}"></span><br/>
+            <span>Họ Và Tên:</span><span th:text="${svDTO.hoVaTen}"></span><br/>
+        </div>
+    </div>
+</body>
+</html>

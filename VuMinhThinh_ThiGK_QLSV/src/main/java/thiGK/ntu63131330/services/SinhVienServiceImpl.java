@@ -39,7 +39,8 @@ public class SinhVienServiceImpl implements SinhvienService {
             int toIndex = Math.min(startItem + pageSize, dsSinhVien.size());
             list = dsSinhVien.subList(startItem, toIndex);
         }
-        Page<SinhVien> sinhvienPage = new PageImpl<SinhVien>(list, PageRequest.of(currentPage, pageSize), dsSinhVien.size());
+        Page<SinhVien> sinhvienPage = new PageImpl<SinhVien>(list, PageRequest.of(currentPage, pageSize),
+                dsSinhVien.size());
         return sinhvienPage;
     }
 
@@ -51,5 +52,10 @@ public class SinhVienServiceImpl implements SinhvienService {
             }
         }
         return null;
+    }
+
+    @Override
+    public void addSinhVien(SinhVien sinhVien) {
+        dsSinhVien.add(sinhVien);
     }
 }

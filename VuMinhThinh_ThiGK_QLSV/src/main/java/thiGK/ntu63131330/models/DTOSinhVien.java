@@ -1,4 +1,4 @@
-package vn.vmt.FormSubmit.Models;
+package thiGK.ntu63131330.models;
 
 public class DTOSinhVien {
 	private String maSoSV;      // Mã số sinh viên

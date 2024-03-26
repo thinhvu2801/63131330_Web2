@@ -95,7 +95,16 @@
             <input type="text" class="search-input" id="searchInput" placeholder="Nhập mã số sinh viên...">
             <button class="search-button" onclick="searchStudent()">Tra cứu</button>
         </div>
-        
+        <div id="addStudentForm" style="">
+            <h2>Thêm sinh viên</h2>
+            <form action="/themMoiSV" method="post">
+                <label for="maSoSV">Mã số sinh viên:</label>
+                <input type="text" id="maSoSV" name="maSoSV" required><br>
+                <label for="hoVaTen">Họ và tên:</label>
+                <input type="text" id="hoVaTen" name="hoVaTen" required><br>
+                <button type="submit">Thêm</button>
+            </form>
+        </div>
         <table>
             <thead>
                 <tr>
@@ -116,8 +125,16 @@
                    th:class="${pageNumber == dsSV.number + 1} ? 'active'"></a>
             </div>
         </div>
-                <button class="add-button" onclick="addStudent()">Thêm sinh viên</button>
-        
+		<script>
+        function toggleAddStudentForm() {
+            var form = document.getElementById("addStudentForm");
+            if (form.style.display === "none") {
+                form.style.display = "block";
+            } else {
+                form.style.display = "none";
+            }
+        }
+    </script>        
     </div>
 </body>
 </html>
