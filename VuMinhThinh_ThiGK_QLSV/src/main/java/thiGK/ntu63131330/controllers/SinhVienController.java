@@ -53,5 +53,16 @@ public class SinhVienController {
         svService.addSinhVien(newSv);
         return "redirect:/danhsachSV"; 
     }
+    @GetMapping("/timKiemSV")
+    public String searchStudentByMSSV(Model model, @RequestParam("mssv") String mssv) {
+        SinhVien sv = svService.findByMSSV(mssv);
+        if (sv != null) {
+            model.addAttribute("foundSV", sv);
+        } else {
+            model.addAttribute("message", "Không tìm thấy sinh viên có MSSV: " + mssv);
+        }
+        return "ketQuaTimKiem";
+    }
+
 
 }
