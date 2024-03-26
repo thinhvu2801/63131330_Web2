@@ -102,7 +102,7 @@
                     <th> Mã số sinh viên </th>
                     <th> Họ và tên </th>
                 </tr>
-            </thead>
+            </thead>	
             <tbody>
                 <tr th:each="sv: ${dsSV}">
                     <td th:text="${sv.maSoSV}" />
@@ -116,6 +116,8 @@
                    th:class="${pageNumber == dsSV.number + 1} ? 'active'"></a>
             </div>
         </div>
+                <button class="add-button" onclick="addStudent()">Thêm sinh viên</button>
+        
     </div>
 </body>
 </html>

@@ -11,7 +11,7 @@ public class HomeController {
 		model.addAttribute("msg", "Hello");
 		return "viewWelcome";
 	}
-	@RequestMapping("/")
+	@RequestMapping("/index")
 	public String index(ModelMap model) {
 		model.addAttribute("msg", "Hello, I am VMT");
 		return "index";
