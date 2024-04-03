@@ -9,6 +9,16 @@
             "projectName": "VuMinhThinh_ThiGK_QLSV",
             "args": "",
             "envFile": "${workspaceFolder}/.env"
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DisplayListObject1Application<DisplayListObject1>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "vn.vmt.DisplayListObject.DisplayListObject1Application",
+            "projectName": "DisplayListObject1",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
         }
     ]
 }
