@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-VuMinhThinhThiGkApplication<VuMinhThinh_ThiGK_QLSV>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "thiGK.ntu63131330.VuMinhThinhThiGkApplication",
+            "projectName": "VuMinhThinh_ThiGK_QLSV",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-DemoApplication<HelloSpringboot>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "mainClass": "vn.vmt.demo.demo.DemoApplication",
+            "projectName": "HelloSpringboot",
+            "args": "",
+            "envFile": "${workspaceFolder}/.env"
+        }
+    ]
+}
