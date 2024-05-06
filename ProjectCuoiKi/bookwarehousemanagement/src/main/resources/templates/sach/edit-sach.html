@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Sửa Sách</title>
+</head>
+<body>
+    <h1>Sửa Sách</h1>
+    <form action="/sach/edit/{id}" method="post" th:object="${sach}">
+        <input type="hidden" th:field="*{id}"/>
+        <input type="text" th:field="*{tenSach}" placeholder="Tên Sách"/>
+        <!-- Thêm các trường khác tùy ý -->
+        <button type="submit">Lưu</button>
+    </form>
+</body>
+</html>

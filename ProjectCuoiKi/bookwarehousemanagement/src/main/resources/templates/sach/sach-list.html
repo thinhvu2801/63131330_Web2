@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Danh sách Sách</title>
+</head>
+<body>
+    <h1>Danh sách Sách</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Tên Sách</th>
+                <!-- Thêm các cột khác tùy ý -->
+                <th>Thao tác</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr th:each="sach : ${sachList}">
+                <td th:text="${sach.id}">ID</td>
+                <td th:text="${sach.tenSach}">Tên Sách</td>
+                <!-- Thêm các cột khác tùy ý -->
+                <td>
+                    <a th:href="@{/sach/edit/{id}(id=${sach.id})}">Sửa</a>
+                    <a th:href="@{/sach/delete/{id}(id=${sach.id})}">Xoá</a>
+                    <a th:href="@{/sach/detail/{id}(id=${sach.id})}">Chi tiết</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <a href="/sach/add">Thêm sách mới</a>
+</body>
+</html>
