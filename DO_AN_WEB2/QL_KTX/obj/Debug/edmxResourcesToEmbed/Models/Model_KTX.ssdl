@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="QLKTXModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Phong">
+    <Key>
+      <PropertyRef Name="maPhong" />
+    </Key>
+    <Property Name="maPhong" Type="varchar" MaxLength="3" Nullable="false" />
+  </EntityType>
+  <EntityType Name="QuanLy">
+    <Key>
+      <PropertyRef Name="taiKhoan" />
+    </Key>
+    <Property Name="taiKhoan" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="matKhau" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="hoQL" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="tenQL" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="gioiTinh" Type="bit" />
+    <Property Name="ngaySinh" Type="date" />
+    <Property Name="anhQL" Type="nvarchar" MaxLength="300" />
+    <Property Name="sdtQL" Type="varchar" MaxLength="15" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SinhVien">
+    <Key>
+      <PropertyRef Name="maSV" />
+    </Key>
+    <Property Name="maSV" Type="varchar" MaxLength="8" Nullable="false" />
+    <Property Name="hoSV" Type="nvarchar" MaxLength="40" Nullable="false" />
+    <Property Name="tenSV" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="gioiTinh" Type="bit" />
+    <Property Name="ngaySinh" Type="date" Nullable="false" />
+    <Property Name="lop" Type="varchar" MaxLength="20" />
+    <Property Name="dongPhi" Type="bit" />
+    <Property Name="anhSV" Type="nvarchar" MaxLength="300" />
+    <Property Name="queQuan" Type="nvarchar" MaxLength="200" />
+    <Property Name="sdtSV" Type="varchar" MaxLength="15" Nullable="false" />
+    <Property Name="matKhau" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="email" Type="varchar" MaxLength="100" />
+    <Property Name="maPhong" Type="varchar" MaxLength="3" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <Association Name="FK__SinhVien__maPhon__3B75D760">
+    <End Role="Phong" Type="Self.Phong" Multiplicity="0..1" />
+    <End Role="SinhVien" Type="Self.SinhVien" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Phong">
+        <PropertyRef Name="maPhong" />
+      </Principal>
+      <Dependent Role="SinhVien">
+        <PropertyRef Name="maPhong" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="QLKTXModelStoreContainer">
+    <EntitySet Name="Phong" EntityType="Self.Phong" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="QuanLy" EntityType="Self.QuanLy" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SinhVien" EntityType="Self.SinhVien" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__SinhVien__maPhon__3B75D760" Association="Self.FK__SinhVien__maPhon__3B75D760">
+      <End Role="Phong" EntitySet="Phong" />
+      <End Role="SinhVien" EntitySet="SinhVien" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

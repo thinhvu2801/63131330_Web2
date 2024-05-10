@@ -1,0 +1,208 @@
+.flex {
+  display: flex !important;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.inline {
+  display: inline !important;
+}
+
+.fw-bold {
+  font-weight: bold;
+}
+
+.fs-30 {
+  font-size: 30px;
+}
+
+.justify-content-left {
+  justify-content: left;
+}
+.flex-x,
+.justify-content-center {
+  justify-content: center;
+}
+.justify-content-right {
+  justify-content: right;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.flex-y,
+.align-items-center {
+  align-items: center;
+}
+
+.flex-x-y {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a,
+.a {
+  text-decoration: none;
+}
+
+.a:hover {
+  text-decoration: underline;
+}
+
+.border {
+  border: solid 1px !important;
+}
+
+.border-top-color {
+  border-top: solid 1px white !important;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-row {
+  flex-direction: row;
+}
+
+.mw-100p {
+  max-width: 100% !important;
+}
+
+.border-b-none {
+  border-bottom: none !important;
+}
+
+.w-100p {
+  width: 100% !important;
+}
+
+.h-100p {
+  height: 100% !important;
+}
+
+.mx-auto {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.font-bold {
+  font-weight: bold;
+}
+
+.a-btn {
+  outline: none;
+  font-weight: 500;
+  color: white;
+}
+
+.btn-success {
+  border: none;
+  color: white;
+  background-color: green;
+}
+
+.btn-cancel {
+  border: none;
+  color: white;
+  background-color: red;
+}
+
+.btn {
+  outline: none;
+  height: 30px;
+  outline: none;
+  padding: 2px 20px;
+  transition: 0.25s;
+  cursor: pointer;
+  border-radius: 3px;
+
+  &:hover {
+    opacity: 0.6
+  }
+}
+
+.slide {
+  position: relative;
+  animation: slide-up 0.4s linear forwards;
+  transform-origin: top;
+  overflow: hidden;
+}
+
+.show-form {
+  animation: slide-up 0.25s linear alternate;
+}
+
+@keyframes slide-up {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
+
+.text-success {
+  color: green;
+}
+
+.text-danger {
+  color: red;
+}
+
+.p-0 {
+  padding: 0 !important;
+}
+
+.pr-5 {
+  padding-right: 5px;
+}
+
+.text {
+  color: gray;
+  transition: 0.25s;
+  &:hover {
+    transform: scale(1.5);
+  }
+}
+
+.text-red {
+  color: red;
+}
+
+.text-green {
+  color: green;
+}
+
+.text-black {
+  color: black;
+}
+
+.bg-red-hover:hover {
+  background-color: red !important;
+}
+
+.bg-green-hover:hover {
+  background-color: green !important;
+}
+
+.btn:active {
+  transform: translateY(5px);
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.bg-white {
+  background-color: white;
+}
+

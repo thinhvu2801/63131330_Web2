@@ -1,0 +1,55 @@
+.form-he-thong {
+  height: calc(100vh - 99px);
+  background: url('/Images/ảnh-ktx-k7.png') no-repeat;
+  background-size: cover;
+
+  & .container {
+    background-color: #e8f0fe;
+    border-radius: 5px;
+
+    & form {
+      padding: 10px;
+
+      & .khung-chon-thao-tac {
+        margin-top: 10px;
+        font-size: 13px
+      }
+    }
+  }
+}
+
+.input-card {
+  width: 350px;
+  height: 40px;
+  outline: none;
+  margin: 5px 0;
+  padding: 0 5px;
+}
+
+.input-card-fake {
+  width: 100%;
+  height: 100%;
+  padding: 0 5px;
+  outline: none;
+  border: none;
+}
+
+.input {
+  width: 300px;
+  height: 30px;
+  outline: none;
+  padding: 0 5px;
+}
+
+.ten-nguoi-truy-cap:hover {
+  text-decoration: underline;
+}
+
+.HT_thong-bao {
+  position: relative;
+
+  & .HT_noi-dung-thong-bao {
+    position: absolute;
+    top: 0;
+  }
+}
