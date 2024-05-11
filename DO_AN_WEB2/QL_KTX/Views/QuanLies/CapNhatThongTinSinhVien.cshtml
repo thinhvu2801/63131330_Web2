@@ -1,0 +1,112 @@
+﻿@model QL_KTX.Models.SinhVien
+@{
+  ViewBag.Title = "Cập nhật thông tin sinh viên";
+  Layout = "~/Views/Shared/_Layout_QuanLy.cshtml";
+
+  string maSV, hoSV, tenSV, ngaySinh, lop, anhSV, queQuan, sdtSV, email, maPhong, matKhau;
+  bool gioiTinh, dongPhi;
+
+  maSV = @ViewBag.maSV != null ? @ViewBag.maSV : Model.maSV;
+  hoSV = @ViewBag.hoSV != null ? @ViewBag.hoSV : Model.hoSV;
+  tenSV = @ViewBag.tenSV != null ? @ViewBag.tenSV : Model.tenSV;
+  ngaySinh = @ViewBag.ngaySinh != null ? @ViewBag.ngaySinh : Convert.ToDateTime(Model.ngaySinh).ToShortDateString();
+  lop = @ViewBag.lop != null ? @ViewBag.lop : Model.lop;
+  anhSV = @ViewBag.anhSV != null ? @ViewBag.anhSV : Model.anhSV;
+  queQuan = @ViewBag.queQuan != null ? @ViewBag.queQuan : Model.queQuan;
+  sdtSV = @ViewBag.sdtSV != null ? @ViewBag.sdtSV : Model.sdtSV;
+  email = @ViewBag.email != null ? @ViewBag.email : Model.email;
+  maPhong = @ViewBag.maPhong != null ? @ViewBag.maPhong : Model.maPhong;
+  matKhau = @ViewBag.matKhau != null ? @ViewBag.matKhau : Model.matKhau;
+  gioiTinh = @ViewBag.gioiTinh != null ? @ViewBag.gioiTinh : Model.gioiTinh;
+  dongPhi = @ViewBag.dongPhi != null ? @ViewBag.dongPhi : Model.dongPhi;
+}
+
+<section class="form-cap-nhat-thong-tin-sinh-vien HT_thong-bao flex-x-y border">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="item">
+        <label>Mã sinh viên:</label>
+        <input class="hidden" type="text" name="maSV" value="@maSV" />
+        <input class="input" type="text" name="maSV_load" value="@maSV" disabled>
+      </div>
+
+      <div class="item">
+        <label>Họ sinh viên:</label>
+        <input class="input" type="text" name="hoSV" value="@hoSV" required>
+      </div>
+
+      <div class="item">
+        <label>Tên sinh viên:</label>
+        <input class="input" type="text" name="tenSV" value="@tenSV" required>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        <span>
+          <input type="radio" name="gioiTinh" value="true" @( @gioiTinh == true ? "checked" : "" )><text>Nam</text>
+          <input type="radio" name="gioiTinh" value="false" @( @gioiTinh == false ? "checked" : "" )><text>Nữ</text>
+        </span>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <input class="input" type="text" name="ngaySinh" value="@ngaySinh" required>
+      </div>
+
+      <div class="item">
+        <label>Lớp:</label>
+        <input class="hidden" type="text" name="lop" value="@lop">
+        <input class="input" type="text" name="lop_load" value="@lop" disabled>
+      </div>
+
+      <div class="item">
+        <label>Đóng phí:</label>
+        <span>
+          <input type="radio" name="dongPhi" value="false" @( @dongPhi == false ? "checked" : "" )><text>Chưa đóng</text>
+          <input type="radio" name="dongPhi" value="true" @( @dongPhi == true ? "checked" : "" )><text>Đã đóng</text>
+        </span>
+      </div>
+
+      <div class="item">
+        <label>Ảnh sinh viên:</label>
+        <input class="hidden" type="text" name="anhSV" value="@anhSV">
+        <input class="input" type="text" name="anhSV_load" value="@anhSV" disabled>
+      </div>
+
+      <div class="item">
+        <label>Quê quán:</label>
+        <input class="hidden" type="text" name="queQuan" value="@queQuan">
+        <input class="input" type="text" name="queQuan_load" value="@queQuan" disabled>
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <input class="hidden" type="text" name="sdtSV" value="@sdtSV">
+        <input class="input" type="text" name="sdtSV_load" value="@sdtSV" disabled>
+      </div>
+
+      <div class="item">
+        <label>Mật khẩu:</label>
+        <input class="input" type="text" name="matKhau" value="@matKhau" required>
+      </div>
+
+      <div class="item">
+        <label>Email:</label>
+        <input class="hidden" type="email" name="email" vaLue="@email">
+        <input class="input" type="email" name="email_load" vaLue="@email" disabled>
+      </div>
+
+      <div class="item">
+        <label>Phòng:</label>
+        <input class="input" type="text" name="maPhong" value="@maPhong" required>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="btn btn-success" type="submit" value="Lưu">
+      </div>
+    </form>
+  </div>
+</section>

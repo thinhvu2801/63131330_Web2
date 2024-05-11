@@ -1,0 +1,85 @@
+﻿@model QL_KTX.Models.SinhVien
+@{
+  ViewBag.Title = "Thông tin sinh viên";
+  Layout = "~/Views/Shared/_Layout_SinhVien.cshtml";
+
+  string img = "/Images/" + Model.anhSV;
+  string gioiTinh = "", phiKTX = "";
+}
+
+<section class="form-thong-tin-sinh-vien border">
+  <div class="container flex w-100p">
+    <div class="thong-tin-anh flex justify-content-right align-items-center">
+      <div>
+        <img src="@img" alt="avatar">
+      </div>
+    </div>
+
+    <div class="thong-tin-chu flex flex-col justify-content-left">
+      <div><p class="text-center title">Thông tin sinh viên</p></div>
+
+      <div class="item">
+        <label>Mã sinh viên:</label>
+        <label>@Html.DisplayFor(model => model.maSV)</label>
+      </div>
+
+      <div class="item">
+        <label>Họ và tên:</label>
+        <label>@Html.DisplayFor(model => model.hoSV) @Html.DisplayFor(model => model.tenSV)</label>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        @{
+          if (Model.gioiTinh == true) { gioiTinh = "Nam"; }
+          else { gioiTinh = "Nữ"; }
+        }
+        <label>@gioiTinh</label>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <label>@Html.DisplayFor(model => model.ngaySinh)</label>
+      </div>
+
+      <div class="item">
+        <label>Lớp:</label>
+        <label>@Html.DisplayFor(model => model.lop)</label>
+      </div>
+
+      <div class="item">
+        <label>Đóng phí:</label>
+        @{
+          if (Model.dongPhi == true) { phiKTX = "Đã đóng"; }
+          else { phiKTX = "Chưa đóng"; }
+        }
+        <label>@phiKTX</label>
+      </div>
+
+      <div class="item">
+        <label>Quê quán:</label>
+        <label>@Html.DisplayFor(model => model.queQuan)</label>
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <label>@Html.DisplayFor(model => model.sdtSV)</label>
+      </div>
+
+      <div class="item">
+        <label>Email:</label>
+        <label>@Html.DisplayFor(model => model.email)</label>
+      </div>
+
+      <div class="item">
+        <label>Phòng:</label>
+        <label>@Html.DisplayFor(model => model.Phong.maPhong)</label>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <button class="btn btn-success"><a class="a-btn" href="./CapNhatThongTinSinhVien">Cập nhật</a></button>
+      </div>
+    </div>
+  </div>
+</section>

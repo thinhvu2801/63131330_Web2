@@ -1,0 +1,36 @@
+﻿
+@{
+  ViewBag.Title = "Quên mật khẩu";
+  Layout = "~/Views/Shared/_Layout_HeThong.cshtml";
+  string taiKhoan = Session["_taiKhoan"].ToString();
+}
+
+<section class="form-he-thong HT_thong-bao flex-x-y mw-100p">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container border show-form">
+    <form action="" method="post">
+      <div class="khung-nhap-du-lieu">
+        <div><input class="input-card" type="text" placeholder="Tài khoản" value="@taiKhoan" disabled></div>
+
+        <div><input class="input-card" type="text" placeholder="Mã tạo lại (5 số)" name="maTaoLai" autofocus required></div>
+        
+        <div class="input-card border flex p-0 bg-white">
+          <input class="input-card-fake input-password" type="password" placeholder="Mật khẩu mới" name="matKhauMoi" required>
+          <span class="icon-eye flex flex-x-y cursor-pointer pr-5"><i class="fa-solid fa-eye-slash"></i></span>
+        </div>
+
+        <div class="input-card border flex p-0 bg-white">
+          <input class="input-card-fake input-password" type="password" placeholder="Xác nhận mật khẩu mới" name="xacNhanMatKhauMoi" required>
+          <span class="icon-eye flex flex-x-y cursor-pointer pr-5"><i class="fa-solid fa-eye-slash"></i></span>
+        </div>
+
+        <div><input class="input-card btn btn-success" type="submit" value="Đổi mật khẩu"></div>
+      </div>
+
+      <div class="khung-chon-thao-tac flex justify-content-center">
+        <p class="flex-x-y"><a class="a" href="../HeThong/DangNhap">Quay lại đăng nhập?</a></p>
+      </div>
+    </form>
+  </div>
+</section>

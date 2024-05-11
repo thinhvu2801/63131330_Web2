@@ -1,0 +1,102 @@
+﻿@model QL_KTX.Models.SinhVien
+@{
+  ViewBag.Title = "Cập nhật thông tin sinh viên";
+  Layout = "~/Views/Shared/_Layout_SinhVien.cshtml";
+
+  string maSV, hoVaTen, ngaySinh, lop, anhSV, queQuan, sdtSV, email, maPhong, gioiTinh, dongPhi;
+
+  maSV = @ViewBag.maSV != null ? @ViewBag.maSV : Model.maSV;
+  hoVaTen = @ViewBag.hoVaTen != null ? @ViewBag.hoVaTen : (Model.hoSV + " " + Model.tenSV);
+  ngaySinh = @ViewBag.ngaySinh != null ? @ViewBag.ngaySinh : Convert.ToDateTime(Model.ngaySinh).ToShortDateString();
+  lop = @ViewBag.lop != null ? @ViewBag.lop : Model.lop;
+  anhSV = @ViewBag.anhSV != null ? @ViewBag.anhSV : Model.anhSV;
+  queQuan = @ViewBag.queQuan != null ? @ViewBag.queQuan : Model.queQuan;
+  sdtSV = @ViewBag.sdtSV != null ? @ViewBag.sdtSV : Model.sdtSV;
+  email = @ViewBag.email != null ? @ViewBag.email : Model.email;
+  maPhong = @ViewBag.maPhong != null ? @ViewBag.maPhong : Model.maPhong;
+  gioiTinh = @ViewBag.gioiTinh != null ? @ViewBag.gioiTinh : Model.gioiTinh.ToString();
+  dongPhi = @ViewBag.dongPhi != null ? @ViewBag.dongPhi : Model.dongPhi.ToString();
+}
+
+<section class="form-cap-nhat-thong-tin-sinh-vien HT_thong-bao flex-x-y border">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="item">
+        <label>Mã sinh viên:</label>
+        <input class="input hidden" type="text" name="maSV" value="@maSV">
+        <input class="input" type="text" name="maSV_load" value="@maSV" disabled>
+      </div>
+
+      <div class="item">
+        <label>Họ và tên:</label>
+        <input class="input hidden" type="text" name="hoVaTen" value="@hoVaTen">
+        <input class="input" type="text" name="hoVaTen_load" value="@hoVaTen" disabled>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        @if (@gioiTinh == "True" || @gioiTinh == "Nam") { gioiTinh = "Nam"; }
+        else { gioiTinh = "Nữ"; }
+        <input class="input hidden" type="text" name="gioiTinh" value="@gioiTinh">
+        <input class="input" type="text" name="gioiTinh_load" value="@gioiTinh" disabled>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <input class="input hidden" type="text" name="ngaySinh" value="@ngaySinh">
+        <input class="input" type="text" name="ngaySinh_load" value="@ngaySinh" disabled>
+      </div>
+
+      <div class="item">
+        <label>Lớp:</label>
+        <input class="input" type="text" name="lop" value="@lop" required>
+      </div>
+
+      <div class="item">
+        <label>Đóng phí:</label>
+        @if (@dongPhi == "True" || @dongPhi == "Đã đóng") { dongPhi = "Đã đóng"; }
+        else { dongPhi = "Chưa đóng"; }
+        <input class="input hidden" type="text" name="dongPhi" value="@dongPhi">
+        <input class="input" type="text" name="dongPhi_load" value="@dongPhi" disabled>
+      </div>
+
+      <div class="item">
+        <label>Ảnh sinh viên:</label>
+        <input class="input" type="text" name="anhSV_cu" value="@anhSV" readonly>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="input p-0" type="file" name="anhSV_moi">
+      </div>
+
+      <div class="item">
+        <label>Quê quán:</label>
+        <input class="input" type="text" name="queQuan" value="@queQuan" required>
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <input class="input" type="text" name="sdtSV" value="@sdtSV" required>
+      </div>
+
+      <div class="item">
+        <label>Email:</label>
+        <input class="input" type="email" name="email" vaLue="@email" required>
+      </div>
+
+      <div class="item">
+        <label>Phòng:</label>
+        <input class="input hidden" type="text" name="maPhong" value="@maPhong">
+        <input class="input" type="text" name="maPhong_load" value="@maPhong" disabled>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="btn btn-success" type="submit" value="Lưu">
+      </div>
+    </form>
+  </div>
+</section>

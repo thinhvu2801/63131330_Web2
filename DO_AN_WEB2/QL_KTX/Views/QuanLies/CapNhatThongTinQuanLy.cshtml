@@ -1,0 +1,72 @@
+﻿@model QL_KTX.Models.QuanLy
+@{
+  ViewBag.Title = "Cập nhật thông tin quản lý";
+  Layout = "~/Views/Shared/_Layout_QuanLy.cshtml";
+
+  string hoQL, tenQL, anhQL, sdtQL, email, ngaySinh;
+  bool gioiTinh;
+
+  hoQL = @ViewBag.hoQL != null ? @ViewBag.hoQL : Model.hoQL;
+  tenQL = @ViewBag.tenQL != null ? @ViewBag.tenQL : Model.tenQL;
+  ngaySinh = @ViewBag.ngaySinh != null ? @ViewBag.ngaySinh : Convert.ToDateTime(Model.ngaySinh).ToShortDateString();
+  anhQL = @ViewBag.anhQL != null ? @ViewBag.anhQL : Model.anhQL;
+  sdtQL = @ViewBag.sdtQL != null ? @ViewBag.sdtQL : Model.sdtQL;
+  email = @ViewBag.email != null ? @ViewBag.email : Model.email;
+  gioiTinh = @ViewBag.gioiTinh != null ? @ViewBag.gioiTinh : Model.gioiTinh;
+}
+
+<section class="form-cap-nhat-thong-tin-quan-ly HT_thong-bao flex-x-y border">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="item">
+        <label>Họ quản lý:</label>
+        <input class="input" type="text" name="hoQL" value="@hoQL" required>
+      </div>
+
+      <div class="item">
+        <label>Tên quản lý:</label>
+        <input class="input" type="text" name="tenQL" value="@tenQL" required>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        <span>
+          <input type="radio" name="gioiTinh" value="true" @( @gioiTinh == true ? "checked" : "" )><text>Nam</text>
+          <input type="radio" name="gioiTinh" value="false" @( @gioiTinh == false ? "checked" : "" )><text>Nữ</text>
+        </span>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <input class="input" type="text" name="ngaySinh" value="@ngaySinh" required>
+      </div>
+
+      <div class="item">
+        <label>Ảnh quản lý:</label>
+        <input class="input" type="text" name="anhQL_cu" value="@anhQL" readonly>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="input p-0" type="file" name="anhQL_moi">
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <input class="input" type="text" name="sdtQL" value="@sdtQL" required>
+      </div>
+
+      <div class="item">
+        <label>Email:</label>
+        <input class="input" type="email" name="email" value="@email" required>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="btn btn-success" type="submit" value="Lưu">
+      </div>
+    </form>
+  </div>
+</section> 

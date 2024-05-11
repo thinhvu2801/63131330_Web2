@@ -1,0 +1,51 @@
+﻿@model QL_KTX.Models.QuanLy
+@{
+  ViewBag.Title = "Liên hệ quản lý";
+  Layout = "~/Views/Shared/_Layout_SinhVien.cshtml";
+  
+  string img = "/Images/" + Model.anhQL;
+  string gioiTinh = null;
+}
+
+<section class="form-thong-tin-quan-ly border">
+  <div class="container flex w-100p">
+    <div class="thong-tin-anh flex justify-content-right align-items-center">
+      <div>
+        <img src="@img" alt="avatar">
+      </div>
+    </div>
+
+    <div class="thong-tin-chu flex flex-col justify-content-center">
+      <div><p class="text-center title">Thông tin quản lý</p></div>
+      
+      <div class="item">
+        <label>Họ và tên:</label>
+        <label>@Html.DisplayFor(model => model.hoQL) @Html.DisplayFor(model => model.tenQL)</label>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        @{
+          if (Model.gioiTinh == true) { gioiTinh = "Nam"; }
+          else { gioiTinh = "Nữ"; }
+        }
+        <label>@gioiTinh</label>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <label>@Html.DisplayFor(model => model.ngaySinh)</label>
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <label>@Html.DisplayFor(model => model.sdtQL)</label>
+      </div>
+
+      <div class="item">
+        <label>Email:</label>
+        <label>@Html.DisplayFor(model => model.email)</label>
+      </div>
+    </div>
+  </div>
+</section>

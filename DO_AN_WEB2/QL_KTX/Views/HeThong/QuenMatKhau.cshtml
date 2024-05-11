@@ -1,0 +1,24 @@
+﻿
+@{
+  ViewBag.Title = "Quên mật khẩu";
+  Layout = "~/Views/Shared/_Layout_HeThong.cshtml";
+}
+
+<section class="form-he-thong HT_thong-bao flex-x-y mw-100p">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container border show-form">
+    <form action="" method="post">
+      <div class="khung-nhap-du-lieu">
+        <div><input class="input-card" type="text" placeholder="Tài khoản" name="taiKhoanNhap" value="@ViewBag.taiKhoanNhap" autofocus required></div>
+        <div><input class="input-card" type="email" placeholder="Địa chỉ email" name="email" value="@ViewBag.email" required></div>
+        <div><input class="input-card btn btn-success" type="submit" value="Tìm tài khoản"></div>
+      </div>
+
+      <div class="khung-chon-thao-tac flex justify-content-between">
+        <p class="flex-x-y"><a class="a" href="../HeThong/DoiMatKhau">Đổi mật khẩu?</a></p>
+        <p class="flex-x-y"><a class="a" href="../HeThong/DangNhap">Quay lại đăng nhập?</a></p>
+      </div>
+    </form>
+  </div>
+</section>

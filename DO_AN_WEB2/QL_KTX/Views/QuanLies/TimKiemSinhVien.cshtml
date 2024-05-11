@@ -1,0 +1,62 @@
+﻿@model List<QL_KTX.Models.SinhVien>
+@{
+  ViewBag.Title = "Tìm kiếm sinh viên";
+  Layout = "~/Views/Shared/_Layout_QuanLy.cshtml";
+
+  var grid = new WebGrid(
+  Model,
+  canPage: true,
+  defaultSort: "maSV",
+  rowsPerPage: 20
+);
+  @Scripts.Render("~/Scripts/jquery-1.6.2.min.js")
+}
+
+<section class="form-tim-kiem-sinh-vien flex-x-y border">
+  <div class="container w-100p">
+    <form class="khung-nhap-thong-tin mx-auto border" action="" method="get">
+      <div>
+        <input class="input" type="text" name="timThongTin" placeholder="Thông tin cần tìm ?" value="@ViewBag.timThongTin" autofocus>
+      </div>
+
+      <div class="khung-nut flex justify-content-between">
+        <input class="btn btn-tim btn-success" type="submit" value="Tìm">
+        <input class="btn btn-nhap-moi btn-cancel" type="button" value="Nhập mới"
+          onclick="window.open('TimKiemSinhVien', '_self')"
+         >
+      </div>
+    </form>
+
+    <div class="khung-hien-thi-ket-qua-tim-kiem">
+      <div id="grid-form" class="border">
+        @grid.GetHtml(
+          tableStyle: "table-grid w-100p",
+          footerStyle: "grid-footer",
+          fillEmptyRows: true,
+          mode: WebGridPagerModes.Numeric,
+          alternatingRowStyle: "alternatingRowStyle",
+          columns: new[]
+          {
+            grid.Column("STT", format: item => item.WebGrid.Rows.IndexOf(item) + 1 + Math.Round(Convert.ToDouble(grid.TotalRowCount / grid.PageCount) / grid.RowsPerPage) * grid.RowsPerPage * grid.PageIndex),
+            grid.Column("maSV", "Mã sinh viên"),
+            grid.Column("hoSV", "Họ sinh viên"),
+            grid.Column("tenSV", "Tên sinh viên"),
+            grid.Column("lop", "Lớp"),
+            grid.Column("dongPhi", "Đóng phí", format: (@item) => @item.dongPhi==true? "Đã đóng" : "Chưa đóng"),
+            grid.Column("sdtSV", "Số điện thoại"),
+            grid.Column("maPhong", "Phòng"),
+            grid.Column(
+              "Chức năng",
+              format:
+                @<text>
+                  <a href="@Url.Action("CapNhatThongTinSinhVien", new { id = item.maSV })" class="a"><i title="Cập nhật" class="fa-solid fa-pen text text-black"></i></a> &nbsp;
+                  <a href="@Url.Action("XemThongTinSinhVien", new { id = item.maSV })" class="a"><i title="Chi tiết" class="fa-solid fa-book-open text text-green"></i></a> &nbsp;
+                  <a href="@Url.Action("XoaSinhVien", new { id = item.maSV })" class="a"><i title="Xoá" class="fa-solid fa-trash text text-red"></i></a>
+                </text>
+            ),
+          }
+        )
+      </div>
+    </div>
+  </div>
+</section>

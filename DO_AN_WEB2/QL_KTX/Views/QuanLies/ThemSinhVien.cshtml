@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Thêm sinh viên";
+    Layout = "~/Views/Shared/_Layout_QuanLy.cshtml";
+}
+
+<section class="form-cap-nhat-thong-tin-sinh-vien HT_thong-bao flex-x-y border">
+  <p class="HT_noi-dung-thong-bao text-danger">@ViewBag.thongBao</p>
+
+  <div class="container">
+    <form action="" method="post" enctype="multipart/form-data">
+      <div class="item">
+        <label>Mã sinh viên:</label>
+        <input class="input" type="text" name="maSV" value="@ViewBag.maSV" autofocus required>
+      </div>
+
+      <div class="item">
+        <label>Họ sinh viên:</label>
+        <input class="input" type="text" name="hoSV" value="@ViewBag.hoSV" required>
+      </div>
+
+      <div class="item">
+        <label>Tên sinh viên:</label>
+        <input class="input" type="text" name="tenSV" value="@ViewBag.tenSV" required>
+      </div>
+
+      <div class="item">
+        <label>Giới tính:</label>
+        <span>
+          <input type="radio" name="gioiTinh" value="true" @( (@ViewBag.gioiTinh == true || @ViewBag.gioiTinh == null) ? "checked" : "" )><text>Nam</text>
+          <input type="radio" name="gioiTinh" value="false" @( @ViewBag.gioiTinh == false ? "checked" : "" )><text>Nữ</text>
+        </span>
+      </div>
+
+      <div class="item">
+        <label>Ngày sinh:</label>
+        <input class="input" type="date" name="ngaySinh" id="ngaySinh" onchange="LuuNgay()" required>
+      </div>
+
+      <div class="item">
+        <label>Lớp:</label>
+        <input class="input" type="text" name="lop" value="@ViewBag.lop" required>
+      </div>
+
+      <div class="item">
+        <label>Đóng phí:</label>
+        <span>
+          <input type="radio" name="dongPhi" value="false" @( (@ViewBag.dongPhi == false || @ViewBag.dongPhi == null) ? "checked" : "" )><text>Chưa đóng</text>
+          <input type="radio" name="dongPhi" value="true" @( @ViewBag.dongPhi == true ? "checked" : "" )><text>Đã đóng</text>
+        </span>
+      </div>
+
+      <div class="item">
+        <label>Quê quán:</label>
+        <input class="input" type="text" name="queQuan" value="@ViewBag.queQuan" required>
+      </div>
+
+      <div class="item">
+        <label>Số điện thoại:</label>
+        <input class="input" type="text" name="sdtSV" value="@ViewBag.sdtSV" required>
+      </div>
+
+      <div class="item">
+        <label>Phòng:</label>
+        <input class="input" type="text" name="maPhong" value="@ViewBag.maPhong" requied>
+      </div>
+
+      <div class="item">
+        <label></label>
+        <input class="btn btn-success" style="height: 30px;" type="submit" value="Lưu">
+      </div>
+    </form>
+  </div>
+</section>

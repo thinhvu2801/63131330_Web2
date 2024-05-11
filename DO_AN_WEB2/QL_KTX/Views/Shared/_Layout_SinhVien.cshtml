@@ -1,0 +1,49 @@
+﻿@{ 
+  string tenNguoiTruyCap = Session["_tenNguoiTruyCap"].ToString();
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>@ViewBag.Title</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="~/Content/Styles/style-main.css"/>
+  <script src="~/Scripts/Javascripts/he-thong.js"></script>
+</head>
+
+<body>
+  <header>
+    <h1 class="title text-center">PHẦN MỀM QUẢN LÝ KÝ TÚC XÁ K7</h1>
+  </header>
+
+  <nav class="nav-link">
+    <div class="link-page flex align-items-center">
+      <a href="@Url.Action("ThongTinSinhVien")">Thông tin</a>
+      <a href="@Url.Action("LienHeQuanLy")">Liên hệ</a>
+      <a href="@Url.Action("TraCuuPhong")">Tra cứu phòng</a>
+    </div>
+
+    <div class="thong-tin-va-link-system flex">
+      <div class="thong-tin-nguoi-truy-cap flex flex-y font-bold">
+        <p>Sinh viên: <span class="ten-nguoi-truy-cap">@tenNguoiTruyCap</span></p>
+      </div>
+
+      <div class="link-system flex">
+        <button class="bg-green-hover" title="Đổi mật khẩu" onclick="Link_DoiMatKhau()"><i class="fa-solid fa-key text-green"></i></button>
+        <button class="bg-red-hover" title="Đăng xuất" onclick="Link_DangXuat()"><i class="fa-solid fa-right-from-bracket text-red"></i></button>
+      </div>
+    </div>
+  </nav>
+
+  <nav class="nav-title">
+    <p>@ViewBag.Title</p>
+  </nav>
+
+  <main>
+    @RenderBody()
+  </main>
+</body>
+</html>
