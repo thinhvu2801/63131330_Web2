@@ -1,19 +1,77 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="x-ua-compatible" content="ie=edge">
-<title>Home Page</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Home Page</title>
 
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet"href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="stylesheet"href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
-	
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+    <style>
+        .carousel-item {
+            height: 100vh;
+            min-height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+        .carousel {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+        }
+        body {
+            position: relative;
+            z-index: 1;
+        }
+        /* Xóa màu nền của header */
+        nav {
+            background-color: transparent !important; /* Sử dụng !important để ghi đè lên các quy tắc CSS khác */
+        }
+    </style>
 </head>
 
 <body>
-	<div th:insert="../template/fragments/header :: header"></div>
+    <!-- Slideshow Background -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-ride="carousel" data-interval="2000">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="/Book-pics/1.jpg" class="d-block w-100" alt="Slide 1">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/2.jpg" class="d-block w-100" alt="Slide 2">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/3.jpg" class="d-block w-100" alt="Slide 3">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/4.jpg" class="d-block w-100" alt="Slide 4">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/5.jpg" class="d-block w-100" alt="Slide 5">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/6.jpg" class="d-block w-100" alt="Slide 6">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/7.jpg" class="d-block w-100" alt="Slide 7">
+            </div>
+            <div class="carousel-item">
+                <img src="/Book-pics/8.jpg " class="d-block w-100" alt="Slide 8">
+            </div>
+        </div>
+    </div>
 
-	<div th:insert="../template/fragments/footer :: footer"></div>
+    <!-- Your Content Here -->
+    <div th:insert="~{fragments/header :: header}"></div>
+
+
+    <!-- Bootstrap and jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@ package com.vmt.bookwarehousemanagement.controllers;
 
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -25,7 +24,6 @@ public class BookController {
 	private final CategoryService categoryService;
 	private final PublisherService publisherService;
 
-	@Autowired
 	public BookController(BookService bookService, AuthorService authorService, CategoryService categoryService,
 			PublisherService publisherService) {
 		this.bookService = bookService;

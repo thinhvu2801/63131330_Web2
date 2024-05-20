@@ -3,18 +3,17 @@ package com.vmt.bookwarehousemanagement.entities;
 import java.util.HashSet;
 import java.util.Set;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.FetchType;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
-import javax.persistence.Table;
-
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
+import jakarta.persistence.Table;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -30,14 +29,11 @@ public class Book {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
 
-	@Column(name = "isbn", length = 50, nullable = false, unique = true)
+	@Column(name = "isbn", length = 50, nullable = false)
 	private String isbn;
 
 	@Column(name = "name", length = 100, nullable = false)
 	private String name;
-
-	@Column(name = "serialName", length = 50, nullable = false)
-	private String serialName;
 
 	@Column(name = "description", length = 250, nullable = false)
 	private String description;
@@ -57,10 +53,9 @@ public class Book {
 			@JoinColumn(name = "publisher_id") })
 	private Set<Publisher> publishers = new HashSet<Publisher>();
 
-	public Book(String isbn, String name, String serialName, String description) {
+	public Book(String isbn, String name, String description) {
 		this.isbn = isbn;
 		this.name = name;
-		this.serialName = serialName;
 		this.description = description;
 	}
 
