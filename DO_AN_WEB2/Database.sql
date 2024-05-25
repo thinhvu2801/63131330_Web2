@@ -45,7 +45,7 @@ create table QuanLy (
 
 -- Dữ liệu cho bảng quản trị
 insert into QuanLy values
-('admin', 'admin', N'Nguyễn Thị', N'Lệ', 0, '1981-09-27', 'avt_admin.jpg', '0903520157', 'admin@ntu.edu.vn')
+('admin', 'admin', N'Lê Thy', N'Ngọc', 0, '2001-09-30', 'avt_admin.jpg', '0918983359', 'admin@ntu.edu.vn')
 
 -- Dữ liệu cho bảng phòng
 insert into Phong values
