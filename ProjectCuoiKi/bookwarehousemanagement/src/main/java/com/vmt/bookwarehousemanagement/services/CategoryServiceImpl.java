@@ -49,5 +49,8 @@ public class CategoryServiceImpl implements CategoryService {
 
 		categoryRepository.deleteById(category.getId());
 	}
-
+	@Override
+    public long countCategories() {
+        return categoryRepository.count();
+    }
 }

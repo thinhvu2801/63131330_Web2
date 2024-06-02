@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Statistics</title>
+    <link rel="stylesheet" type="text/css" href="/css/styles.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Summary</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+</head>
+<body>
+    <div th:insert="~{fragments/header :: header}"></div>
+
+    <h1>Data Statistics</h1>
+    <div style="width: 100%; padding: 20px; margin-top: 20px;">
+        <canvas id="statisticsChart"></canvas>
+    </div>
+    
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var totalBooks = /*[[${totalBooks}]]*/ 0;
+        var totalAuthors = /*[[${totalAuthors}]]*/ 0;
+        var totalCategories = /*[[${totalCategories}]]*/ 0;
+        var totalPublishers = /*[[${totalPublishers}]]*/ 0;
+
+        var ctx = document.getElementById('statisticsChart').getContext('2d');
+        var statisticsChart = new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Books', 'Authors', 'Categories', 'Publishers'],
+                datasets: [
+                    {
+                        label: 'Books',
+                        data: [totalBooks, 0, 0, 0],
+                        backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                        borderColor: 'rgba(75, 192, 192, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Authors',
+                        data: [0, totalAuthors, 0, 0],
+                        backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                        borderColor: 'rgba(153, 102, 255, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Categories',
+                        data: [0, 0, totalCategories, 0],
+                        backgroundColor: 'rgba(255, 159, 64, 0.2)',
+                        borderColor: 'rgba(255, 159, 64, 1)',
+                        borderWidth: 1
+                    },
+                    {
+                        label: 'Publishers',
+                        data: [0, 0, 0, totalPublishers],
+                        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                        borderColor: 'rgba(255, 99, 132, 1)',
+                        borderWidth: 1
+                    }
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+        /*]]>*/
+    </script>
+    <div th:insert="~{fragments/footer :: footer}"></div>
+
+</body>
+</html>

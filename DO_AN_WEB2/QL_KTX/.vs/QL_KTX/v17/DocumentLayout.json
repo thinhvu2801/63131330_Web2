@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\models\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:models\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\controllers\\hethongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:controllers\\hethongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\scripts\\javascripts\\he-thong.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:scripts\\javascripts\\he-thong.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,45 +18,13 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "HeThongController.cs",
-              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\HeThongController.cs",
-              "RelativeDocumentMoniker": "Controllers\\HeThongController.cs",
-              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\HeThongController.cs",
-              "RelativeToolTip": "Controllers\\HeThongController.cs",
-              "ViewState": "AQIAABMAAAAAAAAAAAAgwAAAAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T17:53:21.482Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "he-thong.js",
-              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Scripts\\Javascripts\\he-thong.js",
-              "RelativeDocumentMoniker": "Scripts\\Javascripts\\he-thong.js",
-              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Scripts\\Javascripts\\he-thong.js",
-              "RelativeToolTip": "Scripts\\Javascripts\\he-thong.js",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAcAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2024-05-25T17:52:04.26Z",
-              "EditorCaption": ""
-            }
-          ]
-        },
-        {
-          "DockedWidth": 200,
-          "SelectedChildIndex": 0,
-          "Children": [
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
               "Title": "HeThong.cs",
               "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Models\\HeThong.cs",
               "RelativeDocumentMoniker": "Models\\HeThong.cs",
               "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Models\\HeThong.cs",
               "RelativeToolTip": "Models\\HeThong.cs",
-              "ViewState": "AQIAABsAAAAAAAAAAAAowCEAAAAFAAAA",
+              "ViewState": "AQIAAD4AAAAAAAAAAAAIwEYAAAA6AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-05-25T17:52:25.569Z",
               "EditorCaption": ""

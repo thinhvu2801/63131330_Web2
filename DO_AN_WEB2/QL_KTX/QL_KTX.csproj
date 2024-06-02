@@ -192,7 +192,7 @@
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
-    <Content Include="Images\avt_admin.jpg" />
+    <Content Include="Images\avt_admin.jpeg" />
     <Content Include="Images\avt_default.jpg" />
     <Content Include="Images\ảnh-ktx-k7.png" />
     <Content Include="Models\Model_KTX.Context.tt">

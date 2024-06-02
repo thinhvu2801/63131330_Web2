@@ -49,5 +49,8 @@ public class AuthorServiceImpl implements AuthorService {
 
 		authorRepository.deleteById(author.getId());
 	}
-
+	@Override
+    public long countAuthors() {
+        return authorRepository.count();
+    }
 }

@@ -18,4 +18,6 @@ public interface BookService {
 
 	public void deleteBook(Long id);
 
+	long countBooks();
+	
 }

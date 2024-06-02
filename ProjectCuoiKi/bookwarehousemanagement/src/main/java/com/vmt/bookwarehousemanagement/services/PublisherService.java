@@ -15,5 +15,5 @@ public interface PublisherService {
 	public void updatePublisher(Publisher publisher);
 
 	public void deletePublisher(Long id);
-
+	long countPublishers();
 }

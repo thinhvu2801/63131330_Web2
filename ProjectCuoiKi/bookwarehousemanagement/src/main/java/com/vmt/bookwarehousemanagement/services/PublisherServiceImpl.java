@@ -48,5 +48,8 @@ public class PublisherServiceImpl implements PublisherService {
 
 		publisherRepository.deleteById(publisher.getId());
 	}
-
+	@Override
+    public long countPublishers() {
+        return publisherRepository.count();
+    }
 }

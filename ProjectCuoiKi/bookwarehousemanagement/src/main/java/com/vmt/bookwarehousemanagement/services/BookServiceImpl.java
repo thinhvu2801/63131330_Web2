@@ -58,5 +58,8 @@ public class BookServiceImpl implements BookService {
 
 		bookRepository.deleteById(book.getId());
 	}
-
+	@Override
+    public long countBooks() {
+        return bookRepository.count();
+    }
 }
