@@ -3,7 +3,27 @@
   "WorkspaceRootPath": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\models\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\controllers\\hethongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:controllers\\hethongcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\views\\hethong\\quenmatkhau_taolai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:views\\hethong\\quenmatkhau_taolai.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|d:\\backup2024\\aabackup\\web2\\63131330_web2\\do_an_web2\\ql_ktx\\controllers\\sinhvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:controllers\\sinhvienscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\views\\sinhviens\\capnhatthongtinsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:views\\sinhviens\\capnhatthongtinsinhvien.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\scripts\\javascripts\\he-thong.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:scripts\\javascripts\\he-thong.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\models\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D6FE2B9B-8AAC-4AB1-B1EF-8FE7D13021BC}|QL_KTX.csproj|solutionrelative:models\\hethong.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -19,15 +39,77 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "HeThongController.cs",
+              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\HeThongController.cs",
+              "RelativeDocumentMoniker": "Controllers\\HeThongController.cs",
+              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\HeThongController.cs",
+              "RelativeToolTip": "Controllers\\HeThongController.cs",
+              "ViewState": "AQIAADEBAAAAAAAAAAAAwDsBAAAQAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-05T14:21:29.111Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "QuenMatKhau_TaoLai.cshtml",
+              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Views\\HeThong\\QuenMatKhau_TaoLai.cshtml",
+              "RelativeDocumentMoniker": "Views\\HeThong\\QuenMatKhau_TaoLai.cshtml",
+              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Views\\HeThong\\QuenMatKhau_TaoLai.cshtml",
+              "RelativeToolTip": "Views\\HeThong\\QuenMatKhau_TaoLai.cshtml",
+              "ViewState": "AQIAAAwAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-09-05T14:18:36.614Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "SinhViensController.cs",
+              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\SinhViensController.cs",
+              "RelativeDocumentMoniker": "Controllers\\SinhViensController.cs",
+              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Controllers\\SinhViensController.cs",
+              "RelativeToolTip": "Controllers\\SinhViensController.cs",
+              "ViewState": "AQIAAGkAAAAAAAAAAAAiwE4AAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-03T03:55:29.166Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CapNhatThongTinSinhVien.cshtml",
+              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Views\\SinhViens\\CapNhatThongTinSinhVien.cshtml",
+              "RelativeDocumentMoniker": "Views\\SinhViens\\CapNhatThongTinSinhVien.cshtml",
+              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Views\\SinhViens\\CapNhatThongTinSinhVien.cshtml",
+              "RelativeToolTip": "Views\\SinhViens\\CapNhatThongTinSinhVien.cshtml",
+              "ViewState": "AQIAADAAAAAAAAAAAAAAAEMAAAAMAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2024-06-03T03:55:05.94Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "he-thong.js",
+              "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Scripts\\Javascripts\\he-thong.js",
+              "RelativeDocumentMoniker": "Scripts\\Javascripts\\he-thong.js",
+              "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Scripts\\Javascripts\\he-thong.js",
+              "RelativeToolTip": "Scripts\\Javascripts\\he-thong.js",
+              "ViewState": "AQIAABUAAAAAAAAAAAAAACwAAABhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
+              "WhenOpened": "2024-06-03T03:51:38.315Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
               "Title": "HeThong.cs",
               "DocumentMoniker": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Models\\HeThong.cs",
               "RelativeDocumentMoniker": "Models\\HeThong.cs",
               "ToolTip": "D:\\backup2024\\AABackup\\Web2\\63131330_Web2\\DO_AN_WEB2\\QL_KTX\\Models\\HeThong.cs",
               "RelativeToolTip": "Models\\HeThong.cs",
-              "ViewState": "AQIAAD4AAAAAAAAAAAAIwEYAAAA6AAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAACkAAAAfAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-25T17:52:25.569Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-06-03T03:28:43.639Z"
             }
           ]
         }
